@@ -1,8 +1,12 @@
+# Volume
+Volumes are used by pods to store data.
+
 # PV
-Persistent--the method used to store data is such that it continues beyond the lifetime of a pod as well.
+"Persistent" -> the method used to store data is such that it continues beyond the lifetime of a pod as well.
+A Persistent Volume is a storage unit available cluster-wide whose lifecycle independant of a single pod.
 
 # PVC
-PersistentVolumeClaim (PVC) is a request for storage by a user.  It is similar to a pod. Pods consume node resources and PVCs consume PV resources. 
+PersistentVolumeClaim (PVC) is a request for storage by a user. It is similar to a pod. Pods consume node resources and PVCs consume PV resources. 
 
 # Dynamic provisioning of volumes
 By enabling dynamic provisioning of volumes, storage gets provisioned automatically when the application requires it,
