@@ -23,8 +23,16 @@ data:
   password: generatedBase64_value
 
 ```
+- Create the Secret command from separate files
 
-- Create the Secret
+```
+kubectl create secret generic db-user-pass \
+  --from-file=./username.txt \
+  --from-file=./password.txt
+  ```
+In this case, we are creating a secret based on a file, the key will default to the basename of the file, and the value will default to the file content. 
+
+- Create the Secret from a .yaml file
 ```
 kubectl apply -f secret.yaml
 ```
